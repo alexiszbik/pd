@@ -1,6 +1,6 @@
-#N canvas 99 39 407 566 10;
-#X obj 76 147 / 127;
-#X obj 77 110 sel 0;
+#N canvas 99 50 407 566 10;
+#X obj 78 184 / 127;
+#X obj 79 147 sel 0;
 #X obj 169 189 * 1000;
 #X obj 180 300 pack f f;
 #X msg 151 370 0 \$2;
@@ -10,12 +10,12 @@
 #X obj 84 286 pack f f f f;
 #X msg 93 331 \$1 \$2 \, \$4 \$3 \$2;
 #X obj 272 212 *;
-#X obj 83 233 t f f;
+#X obj 84 255 t f f;
 #X obj 92 450 outlet~ amp;
 #X obj 78 21 inlet velocity;
 #X obj 244 23 inlet adsr;
-#X floatatom 78 62 5 0 0 0 - - -, f 5;
-#X obj 75 175 *;
+#X floatatom 75 51 5 0 0 0 - - -, f 5;
+#X obj 77 212 *;
 #X obj 231 60 unpack f f f f f;
 #X connect 0 0 16 0;
 #X connect 1 0 3 0;

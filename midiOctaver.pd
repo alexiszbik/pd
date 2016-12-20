@@ -1,0 +1,12 @@
+#N canvas 665 259 450 300 10;
+#X obj 63 57 inlet midiNoteIn;
+#X obj 61 195 outlet midiNoteOut;
+#X obj 258 58 inlet octaveSelect;
+#X obj 94 135 expr ($f1 - 2)*12;
+#X obj 63 135 +;
+#X obj 228 93 clip 0 5;
+#X connect 0 0 4 0;
+#X connect 2 0 5 0;
+#X connect 3 0 4 1;
+#X connect 4 0 1 0;
+#X connect 5 0 3 0;
