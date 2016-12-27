@@ -1,0 +1,326 @@
+#N canvas 749 67 1025 795 10;
+#N canvas 0 50 450 250 (subpatch) 0;
+#X array Output 100 float 5;
+#A 0 0.0710415 0.0756504 0.0802592 0.0848672 0.0894736 0.094078 0.0986801
+0.10328 0.107877 0.112473 0.117066 0.121658 0.126165 0.130212 0.133182
+0.134571 0.134181 0.132076 0.128522 0.123909 0.118678 0.113254 0.107996
+0.103168 0.0989253 0.0953155 0.0922989 0.0897697 0.0875835 0.0855838
+0.0836238 0.0815825 0.0793749 0.0769545 0.0743115 0.0714657 0.0684583
+0.0653423 0.0621728 0.0590003 0.0558651 0.0527944 0.0498017 0.0468882
+0.0440448 0.0412557 0.0385019 0.0357639 0.0330245 0.0302704 0.0274929
+0.0246883 0.0218571 0.0190029 0.0161319 0.0132508 0.0103665 0.0074847
+0.0046099 0.00174473 -0.00110981 -0.00395418 -0.00678991 -0.00961922
+-0.0124446 -0.0152683 -0.0180924 -0.0209182 -0.0237467 -0.026578 -0.0294118
+-0.0322476 -0.0350846 -0.0379218 -0.0407586 -0.0435941 -0.046428 -0.0492599
+-0.05209 -0.0549182 -0.0577449 -0.0605703 -0.0633947 -0.0661049 -0.0682812
+-0.0693109 -0.0687358 -0.0663946 -0.0623808 -0.0569768 -0.0505795 -0.0436264
+-0.0365322 -0.0296423 -0.0232039 -0.0173562 -0.0121351 -0.00749131
+-0.00331366 0.00054352;
+#X coords 0 1 100 -1 200 140 1 0 0;
+#X restore 582 639 graph;
+#X obj 25 755 dac~, f 5;
+#X floatatom 32 190 5 0 0 0 - - -, f 5;
+#X obj 30 593 *~;
+#X obj 796 757 tabwrite~ Output;
+#X obj 96 477 s~ Tabwrite;
+#X obj 797 653 r~ Tabwrite;
+#X obj 30 436 *~ 1;
+#X obj 778 12 loadbang;
+#X obj 782 103 s Init;
+#X obj 876 20 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 886 653 r Init;
+#X obj 487 224 vsl 15 128 0 1 0 0 ShikoSynth_MasterVolume empty MVOLUME
+0 -9 0 10 -260097 -1 -1 3175 1;
+#X msg 53 536 \$1 15;
+#X obj 50 562 line~;
+#X obj 440 220 vsl 15 128 0.5 50 0 0 empty empty DISTO!!! 0 -9 0 10
+-258113 -1 -1 103 1;
+#X msg 139 345 \$1 15;
+#X obj 139 367 line~;
+#X obj 30 374 *~;
+#X msg 108 39 120;
+#X obj 61 91 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1 1
+;
+#X obj 531 219 vsl 15 128 0 127 0 0 ShikoSynth_CutOff empty CUTOFF
+0 -9 0 10 -4034 -1 -1 10000 1;
+#X floatatom 104 83 5 0 0 0 - - -, f 5;
+#X obj 572 219 vsl 15 128 0.1 12 0 0 ShikoSynth_Res empty RES 0 -9
+0 10 -159808 -1 -1 1558 1;
+#X obj 34 12 r Init;
+#X msg 34 58 1;
+#X obj 784 59 t b b;
+#X obj 859 105 s PreInit;
+#X msg 491 180 0.25;
+#X msg 441 181 0.9;
+#X obj 521 95 r Init;
+#X obj 859 64 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 761 83 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 102 304 r ShikoSynth_Res;
+#X obj 79 283 r ShikoSynth_CutOff;
+#X obj 843 210 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 2540 1;
+#X obj 879 209 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 815 212 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 127 1;
+#X obj 910 209 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 813 417 s adsr;
+#X obj 814 359 pack f f f f f;
+#X obj 849 139 r Init;
+#X obj 886 714 metro 200;
+#X msg 812 386 \$2 \$3 \$4 \$5 1;
+#X floatatom 572 358 5 0 0 0 - - -, f 5;
+#X obj 54 508 r ShikoSynth_MasterVolume;
+#X obj 515 127 t b b b b b b;
+#X obj 615 216 vsl 15 128 0 1 0 0 ShikoSynth_Osc1Volume empty OSC1VOL
+0 -9 0 10 -203904 -1 -1 10160 1;
+#X floatatom 618 359 5 0 0 0 - - -, f 5;
+#X obj 667 220 vsl 15 128 0 1 0 0 ShikoSynth_Osc2Volume empty OSC2VOL
+0 -9 0 10 -204786 -1 -1 9525 1;
+#X floatatom 667 359 5 0 0 0 - - -, f 5;
+#X obj 29 400 clip~ -1 1;
+#N canvas 338 145 851 555 poly 0;
+#X obj 151 25 inlet midiNote;
+#X obj 191 474 outlet~;
+#X obj 282 25 inlet velocity;
+#X obj 157 160 pack 0 0 0;
+#X obj 156 203 route 1 2 3 4 5 6;
+#X obj 58 309 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 26 327 monoDoubleOsc~;
+#X obj 248 327 monoDoubleOsc~;
+#X obj 136 326 monoDoubleOsc~;
+#X obj 368 326 monoDoubleOsc~;
+#X obj 480 327 monoDoubleOsc~;
+#X obj 157 85 poly 6 1, f 10;
+#X obj 155 310 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 254 310 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 373 309 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 604 308 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 488 308 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 592 327 monoDoubleOsc~;
+#X connect 0 0 11 0;
+#X connect 2 0 11 1;
+#X connect 3 0 4 0;
+#X connect 4 0 5 0;
+#X connect 4 0 6 0;
+#X connect 4 1 8 0;
+#X connect 4 1 12 0;
+#X connect 4 2 7 0;
+#X connect 4 2 13 0;
+#X connect 4 3 9 0;
+#X connect 4 3 14 0;
+#X connect 4 4 10 0;
+#X connect 4 4 16 0;
+#X connect 4 5 15 0;
+#X connect 4 5 17 0;
+#X connect 6 0 1 0;
+#X connect 7 0 1 0;
+#X connect 8 0 1 0;
+#X connect 9 0 1 0;
+#X connect 10 0 1 0;
+#X connect 11 0 3 0;
+#X connect 11 1 3 1;
+#X connect 11 2 3 2;
+#X connect 17 0 1 0;
+#X restore 32 230 pd poly;
+#X obj 280 135 hradio 15 1 0 5 ShikoSynth_Osc1WaveForm empty empty
+0 -8 0 10 -4032 -1 -1 1;
+#X obj 365 133 hradio 15 1 0 5 ShikoSynth_Osc2WaveForm empty empty
+0 -8 0 10 -4032 -1 -1 2;
+#X obj 276 79 hradio 15 1 0 5 ShikoSynth_Osc1Octave empty empty 0 -8
+0 10 -262130 -1 -1 2;
+#X obj 368 77 hradio 15 1 0 5 ShikoSynth_Osc2Octave empty empty 0 -8
+0 10 -262130 -1 -1 1;
+#X msg 366 108 2;
+#X msg 278 52 2;
+#X msg 278 111 1;
+#X obj 302 7 r Init;
+#X floatatom 173 99 5 0 0 0 - - -, f 5;
+#X obj 171 122 mtof;
+#X obj 167 158 osc~;
+#X obj 150 201 *~;
+#X obj 32 264 *~ 0.25;
+#X obj 520 541 rev2~ 100 20 3000 20, f 22;
+#X obj 31 329 ../lop_biquad;
+#X obj 34 120 ../sequencer;
+#N canvas 105 265 813 623 Fx~ 1;
+#X obj 101 24 inlet~;
+#X obj 99 475 outlet~;
+#X obj 233 81 delwrite~ delayline 1000;
+#X obj 230 420 *~;
+#X obj 444 151 r ShikoSynth_DelayMix;
+#X obj 264 142 *~ 0.99;
+#X floatatom 346 60 5 0 0 0 - - -, f 5;
+#X obj 346 38 r ShikoSynth_DelayFeedback;
+#X floatatom 356 145 5 0 0 0 - - -, f 5;
+#X floatatom 444 173 5 0 0 0 - - -, f 5;
+#X obj 356 123 r ShikoSynth_DelayTime;
+#X floatatom 424 332 5 0 0 0 - - -, f 5;
+#X obj 425 352 * 2;
+#X obj 100 421 *~;
+#X floatatom 502 337 5 0 0 0 - - -, f 5;
+#X obj 519 240 > 0.5;
+#X obj 443 208 t i i i i;
+#X obj 444 242 <= 0.5;
+#X obj 419 274 ../if_else;
+#X msg 468 305 0.5;
+#X obj 502 272 ../if_else;
+#X msg 551 303 0.5;
+#X floatatom 502 378 5 0 0 0 - - -, f 5;
+#X obj 503 356 expr 1 - (($f1 - 0.5) * 2);
+#X obj 228 207 delread~ delayline 1000;
+#X text 115 87 Dry Signal;
+#X text 235 29 Wet Signal;
+#X connect 0 0 2 0;
+#X connect 0 0 13 0;
+#X connect 3 0 1 0;
+#X connect 4 0 9 0;
+#X connect 5 0 2 0;
+#X connect 7 0 5 1;
+#X connect 7 0 6 0;
+#X connect 8 0 24 0;
+#X connect 9 0 16 0;
+#X connect 10 0 8 0;
+#X connect 11 0 12 0;
+#X connect 12 0 3 1;
+#X connect 13 0 1 0;
+#X connect 14 0 23 0;
+#X connect 15 0 20 1;
+#X connect 16 0 18 0;
+#X connect 16 1 17 0;
+#X connect 16 2 20 0;
+#X connect 16 3 15 0;
+#X connect 17 0 18 1;
+#X connect 18 0 11 0;
+#X connect 18 1 19 0;
+#X connect 19 0 11 0;
+#X connect 20 0 14 0;
+#X connect 20 1 21 0;
+#X connect 21 0 14 0;
+#X connect 22 0 13 1;
+#X connect 23 0 22 0;
+#X connect 24 0 3 0;
+#X connect 24 0 5 0;
+#X restore 26 648 pd Fx~;
+#X obj 451 476 vsl 15 128 0 1 0 0 ShikoSynth_DelayFeedback empty DELAYFEED
+0 -9 0 10 -232576 -1 -1 7620 1;
+#X obj 326 474 vsl 15 128 0 1 0 0 ShikoSynth_DelayMix empty DELAYMIX
+0 -9 0 10 -232576 -1 -1 5080 1;
+#X obj 385 475 vsl 15 128 0 1000 0 0 ShikoSynth_DelayTime empty DELAYTIME
+0 -9 0 10 -232576 -1 -1 11100 1;
+#X msg 926 178 0;
+#X msg 813 178 0.01;
+#X msg 879 179 0;
+#X msg 843 178 0.2;
+#X msg 368 50 1;
+#X msg 582 175 1.56;
+#X msg 535 178 100;
+#X msg 628 176 0.8;
+#X msg 677 176 0.75;
+#X floatatom 326 610 5 0 0 0 - - -, f 5;
+#X floatatom 385 611 5 0 0 0 - - -, f 5;
+#X floatatom 451 612 5 0 0 0 - - -, f 5;
+#X msg 329 421 0.4;
+#X msg 383 421 874;
+#X msg 448 423 0.6;
+#X obj 386 378 r Init;
+#X connect 2 0 52 0;
+#X connect 3 0 69 0;
+#X connect 6 0 4 0;
+#X connect 7 0 5 0;
+#X connect 7 0 3 0;
+#X connect 8 0 26 0;
+#X connect 10 0 26 0;
+#X connect 11 0 42 0;
+#X connect 13 0 14 0;
+#X connect 14 0 3 1;
+#X connect 15 0 16 0;
+#X connect 16 0 17 0;
+#X connect 17 0 18 1;
+#X connect 18 0 51 0;
+#X connect 19 0 22 0;
+#X connect 20 0 68 0;
+#X connect 22 0 68 1;
+#X connect 23 0 44 0;
+#X connect 24 0 25 0;
+#X connect 24 0 19 0;
+#X connect 25 0 20 0;
+#X connect 26 0 9 0;
+#X connect 26 1 27 0;
+#X connect 28 0 12 0;
+#X connect 29 0 15 0;
+#X connect 30 0 46 0;
+#X connect 31 0 27 0;
+#X connect 32 0 9 0;
+#X connect 33 0 67 2;
+#X connect 34 0 67 1;
+#X connect 35 0 40 2;
+#X connect 35 0 40 0;
+#X connect 36 0 40 3;
+#X connect 36 0 40 0;
+#X connect 37 0 40 1;
+#X connect 37 0 40 0;
+#X connect 38 0 40 4;
+#X connect 38 0 40 0;
+#X connect 40 0 43 0;
+#X connect 41 0 74 0;
+#X connect 41 0 76 0;
+#X connect 41 0 75 0;
+#X connect 41 0 73 0;
+#X connect 42 0 4 0;
+#X connect 43 0 39 0;
+#X connect 45 0 13 0;
+#X connect 46 0 29 0;
+#X connect 46 1 28 0;
+#X connect 46 2 79 0;
+#X connect 46 3 78 0;
+#X connect 46 4 80 0;
+#X connect 46 5 81 0;
+#X connect 47 0 48 0;
+#X connect 49 0 50 0;
+#X connect 51 0 7 0;
+#X connect 52 0 65 0;
+#X connect 57 0 54 0;
+#X connect 58 0 55 0;
+#X connect 59 0 53 0;
+#X connect 60 0 58 0;
+#X connect 60 0 77 0;
+#X connect 60 0 57 0;
+#X connect 60 0 59 0;
+#X connect 61 0 62 0;
+#X connect 62 0 63 0;
+#X connect 63 0 64 1;
+#X connect 65 0 67 0;
+#X connect 67 0 18 0;
+#X connect 68 0 2 0;
+#X connect 68 1 52 1;
+#X connect 69 0 1 0;
+#X connect 69 0 1 1;
+#X connect 70 0 84 0;
+#X connect 71 0 82 0;
+#X connect 72 0 83 0;
+#X connect 73 0 38 0;
+#X connect 74 0 37 0;
+#X connect 75 0 36 0;
+#X connect 76 0 35 0;
+#X connect 77 0 56 0;
+#X connect 78 0 23 0;
+#X connect 79 0 21 0;
+#X connect 80 0 47 0;
+#X connect 81 0 49 0;
+#X connect 85 0 71 0;
+#X connect 86 0 72 0;
+#X connect 87 0 70 0;
+#X connect 88 0 85 0;
+#X connect 88 0 86 0;
+#X connect 88 0 87 0;
