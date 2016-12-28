@@ -1,22 +1,21 @@
 #N canvas 828 55 1054 894 10;
 #N canvas 0 50 450 250 (subpatch) 0;
 #X array Output 100 float 5;
-#A 0 -0.0319132 -0.0300388 -0.0274817 -0.0244582 -0.0211747 -0.0178301
--0.0145924 -0.0115893 -0.00890459 -0.00657804 -0.00461005 -0.0029687
--0.00159842 -0.000429261 0.000614231 0.00160512 0.00260782 0.00367384
-0.00483947 0.00612525 0.00753689 0.00906799 0.0107035 0.0124226 0.0142012
-0.0160139 0.0178366 0.0196483 0.019459 0.0138541 0.00252056 -0.0122908
--0.0284207 -0.0439831 -0.0574847 -0.0678887 -0.0746258 -0.0775598 -0.076922
--0.0732227 -0.0671551 -0.0595005 -0.0510419 -0.042493 -0.0344467 -0.0273421
--0.0214496 -0.0168766 -0.0135887 -0.0114414 -0.0102144 -0.00964511
--0.00951162 -0.00971985 -0.0102588 -0.0111119 -0.0122372 -0.0135761
--0.0150613 -0.0166244 -0.0182025 -0.0197432 -0.021203 -0.02254 -0.0237125
--0.0246908 -0.0254668 -0.0260527 -0.0264753 -0.0267715 -0.0269829 -0.0271509
--0.0273126 -0.0274986 -0.0277357 -0.0280489 -0.0284562 -0.0289584 -0.0295405
--0.0301823 -0.0308628 -0.0315617 -0.0322599 -0.0329413 -0.0335946 -0.0342135
--0.034796 -0.0353436 -0.0358611 -0.0363554 -0.0368337 -0.0373022 -0.0377661
--0.0382299 -0.038697 -0.0391711 -0.0396548 -0.040149 -0.0406521 -0.041164
-;
+#A 0 -0.062746 0.0232654 0.0858649 0.109007 0.0895161 0.0373114 -0.0286141
+-0.0861364 -0.117187 -0.113389 -0.0772525 -0.0208799 0.0380203 0.0826648
+0.102101 0.0934585 0.0623222 0.0180639 -0.028976 -0.0655677 -0.0801163
+-0.0680802 -0.0330211 0.0141112 0.0579502 0.084127 0.0847224 0.0601177
+0.0208025 -0.0146508 -0.0286258 -0.0129508 0.0280773 0.0823308 0.135439
+0.17187 0.178944 0.153075 0.101855 0.0408201 -0.0127359 -0.0452174
+-0.0502678 -0.0302516 0.00499952 0.0420301 0.0684218 0.0759554 0.062099
+0.0309477 -0.00823299 -0.0437995 -0.0651041 -0.0668312 -0.0505442 -0.023788
+0.00237956 0.0182418 0.0186397 0.00282809 -0.0255188 -0.0583469 -0.0858032
+-0.0986995 -0.0915171 -0.066335 -0.0316993 0.00149943 0.023057 0.026562
+0.0112804 -0.0180172 -0.0525534 -0.0825351 -0.100346 -0.102262 -0.0890166
+-0.0655218 -0.0377257 -0.010768 0.00887328 0.0140653 -0.00498953 -0.0549043
+-0.12444 -0.191435 -0.23816 -0.254368 -0.236603 -0.189478 -0.12687
+-0.0675268 -0.0278703 -0.0173396 -0.0353264 -0.0715401 -0.11043 -0.137846
+-0.145456 -0.130343;
 #X coords 0 1 100 -1 200 140 1 0 0;
 #X restore 571 722 graph;
 #X obj 25 755 dac~, f 5;
@@ -32,7 +31,7 @@
 -1;
 #X obj 875 736 r Init;
 #X obj 487 224 vsl 15 128 0 1 0 0 ShikoSynth_MasterVolume empty MVOLUME
-0 -9 0 10 -260097 -1 -1 9650 1;
+0 -9 0 10 -260097 -1 -1 6350 1;
 #X msg 51 559 \$1 15;
 #X obj 48 585 line~;
 #X obj 440 220 vsl 15 128 0.5 50 0 0 empty empty DISTO!!! 0 -9 0 10
@@ -44,10 +43,10 @@
 #X obj 61 91 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1 1
 ;
 #X obj 531 219 vsl 15 128 0 127 0 0 ShikoSynth_CutOff empty CUTOFF
-0 -9 0 10 -4034 -1 -1 9700 1;
+0 -9 0 10 -4034 -1 -1 10700 1;
 #X floatatom 104 83 5 0 0 0 - - -, f 5;
 #X obj 572 219 vsl 15 128 0.1 12 0 0 ShikoSynth_Res empty RES 0 -9
-0 10 -159808 -1 -1 1558 1;
+0 10 -159808 -1 -1 10158 1;
 #X obj 34 12 r Init;
 #X msg 34 58 1;
 #X obj 784 59 t b b;
@@ -82,7 +81,7 @@
 #X obj 667 220 vsl 15 128 0 1 0 0 ShikoSynth_Osc2Volume empty OSC2VOL
 0 -9 0 10 -204786 -1 -1 9525 1;
 #X floatatom 667 359 5 0 0 0 - - -, f 5;
-#X obj 35 437 clip~ -1 1;
+#X obj 35 403 clip~ -1 1;
 #N canvas 338 145 851 555 poly 0;
 #X obj 151 25 inlet midiNote;
 #X obj 191 474 outlet~;
@@ -153,11 +152,11 @@
 #X obj 31 329 ../lop_biquad;
 #X obj 34 120 ../sequencer;
 #X obj 451 476 vsl 15 128 0 1.25 0 0 ShikoSynth_DelayFeedback empty
-DELAYFEED 0 -9 0 10 -232576 -1 -1 4000 1;
+DELAYFEED 0 -9 0 10 -232576 -1 -1 6096 1;
 #X obj 326 474 vsl 15 128 0 1 0 0 ShikoSynth_DelayMix empty DELAYMIX
-0 -9 0 10 -232576 -1 -1 1600 1;
+0 -9 0 10 -232576 -1 -1 0 1;
 #X obj 388 474 vsl 15 128 0 1000 0 0 ShikoSynth_DelayTime empty DELAYTIME
-0 -9 0 10 -232576 -1 -1 1900 1;
+0 -9 0 10 -232576 -1 -1 11100 1;
 #X msg 926 178 0;
 #X msg 813 178 0.01;
 #X msg 879 179 0;
@@ -176,27 +175,14 @@ DELAYFEED 0 -9 0 10 -232576 -1 -1 4000 1;
 #X obj 386 378 r Init;
 #X obj 636 438 r Init;
 #X obj 636 501 vsl 15 128 0 1 0 0 ShikoSynth_ReverbMix empty REVERBMIX
-0 -9 0 10 -262144 -1 -1 3000 1;
+0 -9 0 10 -262144 -1 -1 3900 1;
 #X floatatom 636 637 5 0 0 0 - - -, f 5;
-#N canvas 34 91 880 777 Fx~ 1;
-#X obj 101 24 inlet~;
-#X obj 100 688 outlet~;
-#X obj 146 385 *~;
-#X obj 245 136 r ShikoSynth_DelayMix;
-#X floatatom 249 164 5 0 0 0 - - -, f 5;
-#X floatatom 225 303 5 0 0 0 - - -, f 5;
-#X obj 225 330 * 2;
-#X obj 103 403 *~;
-#X floatatom 307 306 5 0 0 0 - - -, f 5;
-#X obj 325 218 > 0.5;
-#X obj 250 220 <= 0.5;
-#X obj 225 252 ../if_else;
-#X msg 274 275 0.5;
-#X obj 308 250 ../if_else;
-#X msg 357 281 0.5;
-#X floatatom 307 347 5 0 0 0 - - -, f 5;
-#X obj 308 325 expr 1 - (($f1 - 0.5) * 2);
-#X obj 249 186 t f f f f;
+#N canvas 592 112 674 588 Fx~ 1;
+#X obj 20 33 inlet~;
+#X obj 18 513 outlet~;
+#X obj 95 230 *~;
+#X obj 126 128 r ShikoSynth_DelayMix;
+#X obj 21 228 *~;
 #N canvas 949 50 487 380 Fx_delay~ 0;
 #X obj 86 17 inlet~;
 #X obj 90 317 outlet~;
@@ -221,91 +207,48 @@ DELAYFEED 0 -9 0 10 -232576 -1 -1 4000 1;
 #X connect 9 0 8 0;
 #X connect 10 0 9 0;
 #X connect 11 0 7 0;
-#X restore 145 206 pd Fx_delay~;
-#X obj 102 444 *~;
-#X obj 533 486 *~;
-#X obj 630 260 r ShikoSynth_ReverbMix;
-#X floatatom 616 284 5 0 0 0 - - -, f 5;
-#X floatatom 592 423 5 0 0 0 - - -, f 5;
-#X obj 592 450 * 2;
-#X floatatom 674 426 5 0 0 0 - - -, f 5;
-#X obj 692 338 > 0.5;
-#X obj 617 340 <= 0.5;
-#X obj 592 372 ../if_else;
-#X msg 641 395 0.5;
-#X obj 675 370 ../if_else;
-#X msg 724 401 0.5;
-#X floatatom 546 543 5 0 0 0 - - -, f 5;
-#X obj 675 445 expr 1 - (($f1 - 0.5) * 2);
-#X obj 616 306 t f f f f;
-#X floatatom 611 111 5 0 0 0 - - -, f 5;
-#X floatatom 659 134 5 0 0 0 - - -, f 5;
-#X obj 586 16 r ShikoSynth_ReverbLevel;
-#X obj 596 52 * 110;
-#X obj 662 55 r ShikoSynth_ReverbLiveness;
-#X obj 664 94 * 100;
-#X obj 582 188 rev2~ 100 20 3000 20, f 22;
-#X connect 0 0 7 0;
-#X connect 0 0 18 0;
-#X connect 0 0 41 0;
+#X restore 78 94 pd Fx_delay~;
+#X obj 20 368 *~;
+#X obj 289 348 *~;
+#X obj 246 175 r ShikoSynth_ReverbMix;
+#X floatatom 389 113 5 0 0 0 - - -, f 5;
+#X floatatom 437 136 5 0 0 0 - - -, f 5;
+#X obj 364 18 r ShikoSynth_ReverbLevel;
+#X obj 374 54 * 110;
+#X obj 440 57 r ShikoSynth_ReverbLiveness;
+#X obj 442 96 * 100;
+#X obj 126 169 ../crossfade;
+#X obj 254 256 ../crossfade;
+#X obj 419 165 rev2~ 100 20 5000 50, f 22;
+#X connect 0 0 4 0;
+#X connect 0 0 5 0;
+#X connect 0 0 17 0;
 #X connect 2 0 1 0;
-#X connect 3 0 4 0;
-#X connect 4 0 17 0;
-#X connect 5 0 6 0;
-#X connect 6 0 2 1;
-#X connect 7 0 19 0;
+#X connect 3 0 15 0;
+#X connect 4 0 6 0;
+#X connect 5 0 2 0;
+#X connect 6 0 1 0;
+#X connect 7 0 1 0;
 #X connect 8 0 16 0;
-#X connect 9 0 13 1;
-#X connect 10 0 11 1;
-#X connect 11 0 5 0;
-#X connect 11 1 12 0;
-#X connect 12 0 5 0;
-#X connect 13 0 8 0;
-#X connect 13 1 14 0;
-#X connect 14 0 8 0;
-#X connect 15 0 7 1;
-#X connect 16 0 15 0;
-#X connect 17 0 11 0;
-#X connect 17 1 10 0;
-#X connect 17 2 13 0;
-#X connect 17 3 9 0;
-#X connect 18 0 2 0;
-#X connect 19 0 1 0;
-#X connect 20 0 1 0;
-#X connect 21 0 22 0;
-#X connect 22 0 34 0;
-#X connect 23 0 24 0;
-#X connect 24 0 20 1;
-#X connect 25 0 33 0;
-#X connect 26 0 30 1;
-#X connect 27 0 28 1;
-#X connect 28 0 23 0;
-#X connect 28 1 29 0;
-#X connect 29 0 23 0;
-#X connect 30 0 25 0;
-#X connect 30 1 31 0;
-#X connect 31 0 25 0;
-#X connect 32 0 19 1;
-#X connect 33 0 32 0;
-#X connect 34 0 28 0;
-#X connect 34 1 27 0;
-#X connect 34 2 30 0;
-#X connect 34 3 26 0;
-#X connect 35 0 41 1;
-#X connect 36 0 41 2;
-#X connect 37 0 38 0;
-#X connect 38 0 35 0;
-#X connect 39 0 40 0;
-#X connect 40 0 36 0;
-#X connect 41 0 20 0;
-#X restore 32 410 pd Fx~;
+#X connect 9 0 17 1;
+#X connect 10 0 17 2;
+#X connect 11 0 12 0;
+#X connect 12 0 9 0;
+#X connect 13 0 14 0;
+#X connect 14 0 10 0;
+#X connect 15 0 2 1;
+#X connect 15 1 4 1;
+#X connect 16 0 7 1;
+#X connect 16 1 6 1;
+#X connect 17 0 7 0;
+#X restore 29 425 pd Fx~;
 #X msg 636 460 0.2;
 #X obj 697 498 vsl 15 128 0 1 0 0 ShikoSynth_ReverbLevel empty REVERBLEVEL
-0 -9 0 10 -204800 -1 -1 5500 1;
+0 -9 0 10 -204800 -1 -1 12065 1;
 #X floatatom 697 641 5 0 0 0 - - -, f 5;
 #X msg 697 464 0.95;
 #X obj 772 501 vsl 15 128 0 1 0 0 ShikoSynth_ReverbLiveness empty REVERBSIZE
-0 -9 0 10 -204800 -1 -1 5400 1;
+0 -9 0 10 -204800 -1 -1 8890 1;
 #X floatatom 772 644 5 0 0 0 - - -, f 5;
 #X msg 772 467 0.7;
 #X msg 491 180 0.5;
@@ -323,7 +266,7 @@ DELAYFEED 0 -9 0 10 -232576 -1 -1 4000 1;
 #X connect 15 0 16 0;
 #X connect 16 0 17 0;
 #X connect 17 0 18 1;
-#X connect 18 0 89 0;
+#X connect 18 0 50 0;
 #X connect 19 0 22 0;
 #X connect 20 0 66 0;
 #X connect 22 0 66 1;
@@ -363,7 +306,7 @@ DELAYFEED 0 -9 0 10 -232576 -1 -1 4000 1;
 #X connect 45 5 78 0;
 #X connect 46 0 47 0;
 #X connect 48 0 49 0;
-#X connect 50 0 7 0;
+#X connect 50 0 89 0;
 #X connect 51 0 64 0;
 #X connect 56 0 53 0;
 #X connect 57 0 54 0;
@@ -401,7 +344,7 @@ DELAYFEED 0 -9 0 10 -232576 -1 -1 4000 1;
 #X connect 86 0 93 0;
 #X connect 86 0 96 0;
 #X connect 87 0 88 0;
-#X connect 89 0 50 0;
+#X connect 89 0 7 0;
 #X connect 90 0 87 0;
 #X connect 91 0 92 0;
 #X connect 93 0 91 0;
